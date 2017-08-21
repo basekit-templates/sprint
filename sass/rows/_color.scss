@@ -7,7 +7,7 @@
 .row--dark {
     background-color: $row-color-dark;
 
-    &[style] .row-container:after {
+    &[style] .row__container:after {
         background-color: $row-color-dark;
         content: "";
         display: block;
@@ -27,20 +27,31 @@
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    .social-link {
         color: $row-color-light;
     }
+
 
     a {
         color: $row-color-accent;
     }
+
+
+    p,
+    .widget__content {
+        color: #F2F2F2;
+    }
+
+
+    .social-item {
+        background-color: $row-color-accent;
+    }
+
+
 }
 
 
-.row--dark p,
-.row--dark .widget__content {
-    color: #F2F2F2;
-}
 
 .row--dark button,
 .row--dark button:hover {
@@ -55,7 +66,7 @@
 .row--light {
     background-color: $row-color-light;
 
-    &[style] .row-container:after {
+    &[style] .row__container:after {
         background-color: fade-out($row-color-light, 0.25);
         content: "";
         display: block;
@@ -75,13 +86,27 @@
     h2,
     h3,
     h4,
-    h5 {
+    h5,
+    .social-link {
         color: $row-color-dark;
     }
+
 
     a {
         color: $row-color-accent;
     }
+
+
+    p,
+    .widget__content {
+        color: #797979;
+    }
+
+
+    .social-item {
+        background-color: #797979;
+    }
+
 
     .button,
     button {
@@ -89,11 +114,6 @@
     }
 }
 
-
-.row--light p,
-.row--light .widget__content {
-    color: #797979;
-}
 
 .row--light .contactform__legend {
     color: #1A1919;
@@ -120,7 +140,7 @@
 .row--accent {
     background-color: $row-color-accent;
 
-    &[style] .row-container:after {
+    &[style] .row__container:after {
         background-color: fade-out($row-color-accent, 0.25);
         content: "";
         display: block;
@@ -130,24 +150,40 @@
         right: 0;
         bottom: 0;
     }
+}
 
-    a {
-        color: $row-color-light
+.row--accent {
+
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a,
+    .social-link {
+        color: $row-color-light;
+    }
+
+
+    p,
+    .widget__content {
+        color: #e6e4e4;
+    }
+
+
+    .social-item {
+        background-color: #e6e4e4;
+    }
+
+
+    .button,
+    button {
+        color: $row-color-light;
     }
 }
 
-.row--accent h1,
-.row--accent h2,
-.row--accent h3,
-.row--accent h4,
-.row--accent h5 {
-    color: #fff;
-}
-
-.row--accent p,
-.row--accent .widget__content {
-    color: #F2F2F2;
-}
 
 .row--accent button,
 .row--accent button:hover {

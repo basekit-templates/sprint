@@ -66,9 +66,12 @@ h1 b {
     font-weight: inherit!important;
 }
 
-[data-name="content"] + [data-name="content"],
-[data-name="content"] + [data-name="button"] {
+[data-name="content"] + [data-name="content"] {
     margin-top: 6px;
+}
+
+[data-name="content"] + [data-name="button"] {
+    margin-top: 10px;
 }
 
 .button,
@@ -78,7 +81,44 @@ button {
 }
 
 .gallery {
-     .row__container & {
-        padding: 0!important;
+     .row--default-height &,
+     .row--thin-height & {
+        height: 200px;
+    }
+
+    +.widget-overlay {
+        height: calc(100% + 160px !important;
+        top: -80px !important;
+    }
+}
+
+.gallery-list {
+     .row--default-height &,
+     .row--thin-height & {
+        margin-bottom: 0;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.gallery__image-link {
+     .row--default-height &,
+     .row--thin-height & {
+        height: calc(100% + 80px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+[data-name="map"] {
+     .row--default-height &,
+     .row--thin-height & {
+        height: 200px;
     }
 }
