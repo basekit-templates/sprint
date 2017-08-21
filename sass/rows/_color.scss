@@ -1,13 +1,13 @@
 
-.row .widget {
-    z-index: 1;
-}
+// .row .widget {
+//     z-index: 1;
+// }
 
 
 .row--dark {
     background-color: $row-color-dark;
 
-    &[style]:after {
+    &[style] .row-container:after {
         background-color: $row-color-dark;
         content: "";
         display: block;
@@ -30,6 +30,10 @@
     h5 {
         color: $row-color-light;
     }
+
+    a {
+        color: $row-color-accent;
+    }
 }
 
 
@@ -51,7 +55,7 @@
 .row--light {
     background-color: $row-color-light;
 
-    &[style]:after {
+    &[style] .row-container:after {
         background-color: fade-out($row-color-light, 0.25);
         content: "";
         display: block;
@@ -63,13 +67,28 @@
     }
 }
 
-.row--light h1,
-.row--light h2,
-.row--light h3,
-.row--light h4,
-.row--light h5 {
-    color: #1a1919;
+.row--light {
+
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $row-color-dark;
+    }
+
+    a {
+        color: $row-color-accent;
+    }
+
+    .button,
+    button {
+        color: $row-color-light;
+    }
 }
+
 
 .row--light p,
 .row--light .widget__content {
@@ -101,7 +120,7 @@
 .row--accent {
     background-color: $row-color-accent;
 
-    &[style]:after {
+    &[style] .row-container:after {
         background-color: fade-out($row-color-accent, 0.25);
         content: "";
         display: block;
@@ -110,6 +129,10 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    a {
+        color: $row-color-light
     }
 }
 

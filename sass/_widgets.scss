@@ -840,8 +840,10 @@ textarea {
     }
     .social-link {
         display: inline-block;
-        padding: 5px 8px 6px;
+        padding: 0;
         color: $color-swatch1;
+        position: relative;
+        top: -2px;
         &:before {
             margin-right: 0;
             font-size: 14px;
