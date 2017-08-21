@@ -8,7 +8,7 @@
     background-color: $row-color-dark;
 
     &[style]:after {
-        background-color: fade-in($row-color-dark, 25%);
+        background-color: fade-in($row-color-dark, 0.25);
         content: "";
         display: block;
         position: absolute;
@@ -51,7 +51,7 @@
     background-color: $row-color-light;
 
     &[style]:after {
-        background-color: fade-in($row-color-light, 25%);
+        background-color: fade-in($row-color-light, 0.25);
         content: "";
         display: block;
         position: absolute;
@@ -101,7 +101,7 @@
     background-color: $row-color-accent;
 
     &[style]:after {
-        background-color: fade-in($row-color-accent, 25%);
+        background-color: fade-in($row-color-accent, 0.25);
         content: "";
         display: block;
         position: absolute;
