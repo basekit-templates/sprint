@@ -55,6 +55,7 @@ $row-color-light-foreground: map-get($style-set, 'row-color-light-foreground');
 $row-color-accent-foreground: map-get($style-set, 'row-color-accent-foreground');
 $row-font-heading: map-get($style-set, 'row-font-heading');
 $row-font-body: map-get($style-set, 'row-font-body');
+$row-font-weight: map-get($style-set, 'row-font-weight');
 
 :root {
     --style-set-id: unquote($style-set-id);
@@ -66,4 +67,5 @@ $row-font-body: map-get($style-set, 'row-font-body');
     --row-color-accent-foreground: $row-color-accent-foreground;
     --row-font-heading: $row-font-heading;
     --row-font-body: $row-font-body;
+    --row-font-weight: $row-font-weight;
 }
