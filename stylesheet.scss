@@ -38,7 +38,7 @@
 // 1. #LESS Includes
 // -----------------------------
 
-$style-set-id: 'example_01' !default;
+$style-set-id: 'example_03' !default;
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Petrona|Playfair+Display|Poppins:700|Rubik');
 @import 'sass/style-sets';
@@ -111,7 +111,7 @@ button {
 .gallery {
      .row--default-height &,
      .row--thin-height & {
-        height: 200px;
+        height: 175px;
     }
 
     +.widget-overlay {
