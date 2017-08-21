@@ -65,6 +65,16 @@ h1 b {
     font-weight: inherit!important;
 }
 
+[data-name="content"] + [data-name="content"],
+[data-name="content"] + [data-name="button"] {
+    margin-top: 6px;
+}
+
+.button,
+button {
+    padding: 15px 20px;
+}
+
 .gallery {
      .row__container & {
         padding: 0!important;

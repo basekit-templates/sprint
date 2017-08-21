@@ -8,7 +8,7 @@
     background-color: $row-color-dark;
 
     &[style]:after {
-        background-color: rgba($row-color-dark, 25%);
+        background-color: fade-in($row-color-dark, 25%);
         content: "";
         display: block;
         position: absolute;
@@ -19,13 +19,18 @@
     }
 }
 
-.row--dark h1,
-.row--dark h2,
-.row--dark h3,
-.row--dark h4,
-.row--dark h5 {
-    color: #fff;
+.row--dark {
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $row-color-light;
+    }
 }
+
 
 .row--dark p,
 .row--dark .widget__content {
@@ -46,7 +51,7 @@
     background-color: $row-color-light;
 
     &[style]:after {
-        background-color: rgba($row-color-light, 25%);
+        background-color: fade-in($row-color-light, 25%);
         content: "";
         display: block;
         position: absolute;
@@ -96,7 +101,7 @@
     background-color: $row-color-accent;
 
     &[style]:after {
-        background-color: rgba($row-color-accent, 25%);
+        background-color: fade-in($row-color-accent, 25%);
         content: "";
         display: block;
         position: absolute;
