@@ -11,7 +11,7 @@
         background-color: $row-color-dark;
         content: "";
         display: block;
-        opacity: 0.25;
+        opacity: 0.5;
         position: absolute;
         top: 0;
         left: 0;
@@ -80,7 +80,8 @@
     background-color: $row-color-light;
 
     &[style] .row__container:after {
-        background-color: fade-out($row-color-light, 0.25);
+        background-color: $row-color-light;
+        opacity: 0.5;
         content: "";
         display: block;
         position: absolute;
@@ -171,7 +172,8 @@
     background-color: $row-color-accent;
 
     &[style] .row__container:after {
-        background-color: fade-out($row-color-accent, 0.25);
+        background-color: $row-color-accent;
+        opacity: 0.5;
         content: "";
         display: block;
         position: absolute;
