@@ -16,6 +16,8 @@ $style-sets: (
         row-color-dark-foreground: #fff,
         row-color-light-foreground: #1a1919,
         row-color-accent-foreground: #fff,
+        row-font-body: 'Poppins',
+        row-font-heading: 'Poppins'
     ),
     example_03: (
         row-color-dark: #2c2b3d,
@@ -23,7 +25,9 @@ $style-sets: (
         row-color-accent: #998d5e,
         row-color-dark-foreground: #fdfcff,
         row-color-light-foreground: #2a2b3d,
-        row-color-accent-foreground: #fff
+        row-color-accent-foreground: #fff,
+        row-font-body: 'Petrona',
+        row-font-heading: 'Georgia'
     ),
     example_04: (
         row-color-dark: #0c495e,
@@ -31,7 +35,9 @@ $style-sets: (
         row-color-accent: #feb904,
         row-color-dark-foreground: #fff,
         row-color-light-foreground: #65797d,
-        row-color-accent-foreground: #072d3a
+        row-color-accent-foreground: #072d3a,
+        row-font-body: 'Lato',
+        row-font-heading: 'Lato'
     )
 );
 

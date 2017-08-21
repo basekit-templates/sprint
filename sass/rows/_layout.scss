@@ -34,6 +34,22 @@
     @include justify-content(center);
 }
 
+.row--vertical-align-center .responsivecolumns {
+    @include flex-display;
+
+    .column {
+        @include align-self(center);
+    }
+}
+
+.row--vertical-align-bottom .responsivecolumns {
+    @include flex-display;
+
+    .column {
+        @include align-self(flex-end);
+    }
+}
+
 .row--layout-wide .row__container {
     box-sizing: border-box;
     padding-left: 20px;
