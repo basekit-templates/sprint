@@ -37,6 +37,15 @@
         color: $row-color-light;
     }
 
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
+    }
+
 
     a {
         color: $row-color-light;
@@ -97,6 +106,15 @@
     h5,
     .social-link {
         color: $row-color-dark;
+    }
+
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
     }
 
 
@@ -179,6 +197,15 @@
     a,
     .social-link {
         color: $row-color-light;
+    }
+
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
     }
 
 
