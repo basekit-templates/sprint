@@ -3,7 +3,7 @@
     "preprocessor": "sass",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
-    "screenshot": "abroad-screenshot.jpg",
+    "screenshot": "screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
