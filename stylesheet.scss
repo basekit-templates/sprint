@@ -42,7 +42,7 @@ $style-set-id: 'example_01' !default;
 @import 'sass/style-sets';
 
 
-
+@import "sass/rows/flexbox-mixins";
 @import "bk-sass-framework"; // BaseKit LESS Framework
 
 // ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
@@ -58,7 +58,6 @@ $style-set-id: 'example_01' !default;
 @import "sass/plugins/plugin-menu"; // Plugin: Menu CSS
 @import "sass/plugins/plugin-ecommerce"; // Plugin: Ecommerce CSS
 
-@import "sass/rows/flexbox-mixins";
 @import "sass/rows/layout";
 @import "sass/rows/color";
 

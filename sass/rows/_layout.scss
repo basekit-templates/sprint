@@ -35,7 +35,7 @@
 }
 
 .row--vertical-align-center .responsivecolumns {
-    @include flex-display;
+    @include flexbox;
 
     .column {
         @include align-self(center);
@@ -43,7 +43,7 @@
 }
 
 .row--vertical-align-bottom .responsivecolumns {
-    @include flex-display;
+    @include flexbox;
 
     .column {
         @include align-self(flex-end);
