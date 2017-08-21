@@ -18,6 +18,11 @@
         right: 0;
         bottom: 0;
     }
+
+    &[style] .content,
+    &[style] .bk-button {
+        z-index: 9001;
+    }
 }
 
 .row--dark {
@@ -73,6 +78,11 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    &[style] .content,
+    &[style] .bk-button {
+        z-index: 9001;
     }
 }
 
@@ -149,6 +159,11 @@
         left: 0;
         right: 0;
         bottom: 0;
+    }
+
+    &[style] .content,
+    &[style] .bk-button {
+        z-index: 9001;
     }
 }
 
