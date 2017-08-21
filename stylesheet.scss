@@ -39,6 +39,8 @@
 // -----------------------------
 
 $style-set-id: 'example_01' !default;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Petrona|Playfair+Display|Poppins:700|Rubik');
 @import 'sass/style-sets';
 
 
@@ -61,7 +63,7 @@ $style-set-id: 'example_01' !default;
 @import "sass/rows/layout";
 @import "sass/rows/color";
 
-body, p, li {
+body, p, li, .navigation-item .item-name, button, .button {
     font-family: $row-font-body;
 }
 
@@ -71,6 +73,7 @@ h3,
 h4,
 h5 {
     font-family: $row-font-heading;
+    font-weight: $row-font-weight;
 }
 
 h1 b {

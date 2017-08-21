@@ -37,6 +37,10 @@
 .row--vertical-align-center .responsivecolumns {
     @include flexbox;
 
+    @media only screen and (max-width: 860px) {
+        display: block;
+    }
+
     .column {
         @include align-self(center);
     }
@@ -44,6 +48,10 @@
 
 .row--vertical-align-bottom .responsivecolumns {
     @include flexbox;
+
+    @media only screen and (max-width: 860px) {
+        display: block;
+    }
 
     .column {
         @include align-self(flex-end);
