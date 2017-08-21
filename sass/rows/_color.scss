@@ -1,0 +1,135 @@
+
+.row .widget {
+    z-index: 1;
+}
+
+
+.row--dark {
+    background-color: $row-color-dark;
+
+    &[style]:after {
+        background-color: rgba($row-color-dark, 25%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.row--dark h1,
+.row--dark h2,
+.row--dark h3,
+.row--dark h4,
+.row--dark h5 {
+    color: #fff;
+}
+
+.row--dark p,
+.row--dark .widget__content {
+    color: #F2F2F2;
+}
+
+.row--dark button,
+.row--dark button:hover {
+    background-color: rgba(216, 216, 216, .41);
+    color: #f2f2f2;
+}
+
+
+
+
+
+.row--light {
+    background-color: $row-color-light;
+
+    &[style]:after {
+        background-color: rgba($row-color-light, 25%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.row--light h1,
+.row--light h2,
+.row--light h3,
+.row--light h4,
+.row--light h5 {
+    color: #1a1919;
+}
+
+.row--light p,
+.row--light .widget__content {
+    color: #797979;
+}
+
+.row--light .contactform__legend {
+    color: #1A1919;
+}
+
+.row--light .contactform__button {
+    background-color: $row-color-accent;
+}
+
+.row--light input[type="text"],
+.row--light input[type="search"],
+.row--light input[type="email"],
+.row--light input[type="tel"],
+.row--light input[type="url"],
+.row--light input[type="password"],
+.row--light textarea {
+    background-color: rgba(216, 216, 216, .41);
+}
+
+
+
+
+
+.row--accent {
+    background-color: $row-color-accent;
+
+    &[style]:after {
+        background-color: rgba($row-color-accent, 25%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.row--accent h1,
+.row--accent h2,
+.row--accent h3,
+.row--accent h4,
+.row--accent h5 {
+    color: #fff;
+}
+
+.row--accent p,
+.row--accent .widget__content {
+    color: #F2F2F2;
+}
+
+.row--accent button,
+.row--accent button:hover {
+    background-color: rgba(216, 216, 216, .41);
+    color: #f2f2f2;
+}
+
+.row--background-type-image {
+    background-size: cover;
+}
+
+.row--background-type-image {
+    background-color: transparent;
+}
