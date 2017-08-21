@@ -39,26 +39,24 @@
 
 
     p,
-    .widget__content {
+    .widget__content,
+    label {
         color: #F2F2F2;
     }
 
 
     .social-item {
-        background-color: $row-color-accent;
+        background-color: lighten($row-color-dark, 35%);
     }
 
 
+    .button,
+    button,
+    .contactform__button {
+        background-color: rgba(216, 216, 216, .41);
+        color: #f2f2f2;
+    }
 }
-
-
-
-.row--dark button,
-.row--dark button:hover {
-    background-color: rgba(216, 216, 216, .41);
-    color: #f2f2f2;
-}
-
 
 
 
@@ -104,12 +102,14 @@
 
 
     .social-item {
-        background-color: #797979;
+        background-color: darken($row-color-light, 35%);
     }
 
 
     .button,
-    button {
+    button,
+    .contactform__button {
+        background-color: $row-color-accent;
         color: $row-color-light;
     }
 }
@@ -168,28 +168,25 @@
 
 
     p,
-    .widget__content {
+    .widget__content,
+    label {
         color: #e6e4e4;
     }
 
 
     .social-item {
-        background-color: #e6e4e4;
+        background-color: darken($row-color-accent, 35%);
     }
 
 
     .button,
-    button {
+    button,
+    .contactform__button {
+        background-color: rgba(216, 216, 216, .41);
         color: $row-color-light;
     }
 }
 
-
-.row--accent button,
-.row--accent button:hover {
-    background-color: rgba(216, 216, 216, .41);
-    color: #f2f2f2;
-}
 
 .row--background-type-image {
     background-size: cover;

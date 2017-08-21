@@ -390,11 +390,9 @@ a.company-link:hover {
 .gallery__gallery-item {
     position: relative;
     width: 32%;
-    margin-bottom: 2%;
     // Display 100% at mobile
     @media #{$mobile} {
         width: 100%;
-        margin-bottom: 4%;
     }
 }
 

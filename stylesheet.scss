@@ -66,13 +66,22 @@ h1 b {
     font-weight: inherit!important;
 }
 
+
+[data-name="row"]:nth-child(n+2) h1 {
+    font-size: 54px;
+    line-height: 58px;
+}
+
+
 [data-name="content"] + [data-name="content"] {
     margin-top: 6px;
 }
 
+
 [data-name="content"] + [data-name="button"] {
     margin-top: 10px;
 }
+
 
 .button,
 button {
@@ -87,7 +96,7 @@ button {
     }
 
     +.widget-overlay {
-        height: calc(100% + 160px !important;
+        height: calc(100% + 160px);
         top: -80px !important;
     }
 }
@@ -116,9 +125,3 @@ button {
     }
 }
 
-[data-name="map"] {
-     .row--default-height &,
-     .row--thin-height & {
-        height: 200px;
-    }
-}
