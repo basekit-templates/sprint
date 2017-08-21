@@ -5,7 +5,9 @@ $style-sets: (
         row-color-accent: #3E9CCB,
         row-color-dark-foreground: #fff,
         row-color-light-foreground: #1a1919,
-        row-color-accent-foreground: #fff
+        row-color-accent-foreground: #fff,
+        row-font-body: 'Georgia',
+        row-font-heading: 'PT Serif'
     ),
     example_02: (
         row-color-dark: #3E417E,
@@ -37,7 +39,9 @@ $style-sets: (
         row-color-accent: #998d5e,
         row-color-dark-foreground: #FFFFFF,
         row-color-light-foreground: #2B2B3C,
-        row-color-accent-foreground: #FFFFFF
+        row-color-accent-foreground: #FFFFFF,
+        row-font-body: 'Rubik',
+        row-font-heading: 'Playfair Display'
     )
 );
 
@@ -49,6 +53,8 @@ $row-color-accent: map-get($style-set, 'row-color-accent');
 $row-color-dark-foreground: map-get($style-set, 'row-color-dark-foreground');
 $row-color-light-foreground: map-get($style-set, 'row-color-light-foreground');
 $row-color-accent-foreground: map-get($style-set, 'row-color-accent-foreground');
+$row-font-heading: map-get($style-set, 'row-font-heading');
+$row-font-body: map-get($style-set, 'row-font-body');
 
 :root {
     --style-set-id: unquote($style-set-id);
@@ -58,4 +64,6 @@ $row-color-accent-foreground: map-get($style-set, 'row-color-accent-foreground')
     --row-color-dark-foreground: $row-color-dark-foreground;
     --row-color-light-foreground: $row-color-light-foreground;
     --row-color-accent-foreground: $row-color-accent-foreground;
+    --row-font-heading: $row-font-heading;
+    --row-font-body: $row-font-body;
 }
