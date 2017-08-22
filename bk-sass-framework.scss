@@ -1,3 +1,17 @@
+
+// -----------------------------
+// BaseKit Sass Framework: V8
+// -----------------------------
+
+
+
+
+// -----------------------------
+// Core Import
+// -----------------------------
+
+
+// Reset: Normalize & Typeset
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 
@@ -544,6 +558,9 @@ template {
 }
 
 
+
+// Typography: Base Typography & Font Icons
+
 // -------------------------
 // CORE: Typography - Icons
 // -------------------------
@@ -670,7 +687,6 @@ template {
 }
 
 
-
 // -------------------------------------
 //  CORE - Typography
 // -------------------------------------
@@ -725,6 +741,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    color: $font-swatch5-color;
+    font-family: $font-swatch5-font-family;
+    font-size: $font-swatch5-font-size;
+    font-weight: $font-swatch5-font-weight;
+    letter-spacing: $font-swatch5-letter-spacing
+    line-height: $font-swatch5-line-height;
+}
+
 
 // Paragraph, List Elements, Blockquote
 p,
@@ -737,6 +762,18 @@ blockquote,
     font-weight: $font__p--font-weight;
     letter-spacing: $font__p--letter-spacing;
     line-height: $font__p--line-height;
+}
+
+p,
+li,
+blockquote,
+.paragraph {
+    color: $font-swatch5-color;
+    font-family: $font-swatch5-font-family;
+    font-size: $font-swatch5-font-size;
+    font-weight: $font-swatch5-font-weight;
+    letter-spacing: $font-swatch5-letter-spacing
+    line-height: $font-swatch5-line-height;
 }
 
 
@@ -756,6 +793,17 @@ h1,
     line-height: $font__h1--line-height;
 }
 
+h1,
+.heading--1 {
+    color: $font-swatch1-color;
+    font-family: $font-swatch1-font-family;
+    font-size: $font-swatch1-font-size;
+    font-weight: $font-swatch1-font-weight;
+    letter-spacing: $font-swatch1-letter-spacing
+    line-height: $font-swatch1-line-height;
+}
+
+
 
 
 
@@ -771,6 +819,17 @@ h2,
     font-weight: $font__h2--font-weight;
     letter-spacing: $font__h2--letter-spacing;
     line-height: $font__h2--line-height;
+}
+
+
+h2,
+.heading--2 {
+    color: $font-swatch2-color;
+    font-family: $font-swatch2-font-family;
+    font-size: $font-swatch2-font-size;
+    font-weight: $font-swatch2-font-weight;
+    letter-spacing: $font-swatch2-letter-spacing
+    line-height: $font-swatch2-line-height;
 }
 
 
@@ -791,6 +850,17 @@ h3,
 }
 
 
+h3,
+.heading--3 {
+    color: $font-swatch3-color;
+    font-family: $font-swatch3-font-family;
+    font-size: $font-swatch3-font-size;
+    font-weight: $font-swatch3-font-weight;
+    letter-spacing: $font-swatch3-letter-spacing
+    line-height: $font-swatch3-line-height;
+}
+
+
 
 
 //  1.5 - Heading 4
@@ -805,6 +875,16 @@ h4,
     font-weight: $font__h4--font-weight;
     letter-spacing: $font__h4--letter-spacing;
     line-height: $font__h4--line-height;
+}
+
+h4,
+.heading--4 {
+    color: $font-swatch4-color;
+    font-family: $font-swatch4-font-family;
+    font-size: $font-swatch4-font-size;
+    font-weight: $font-swatch4-font-weight;
+    letter-spacing: $font-swatch4-letter-spacing
+    line-height: $font-swatch4-line-height;
 }
 
 
@@ -1020,6 +1100,7 @@ ol {
 
 
 
+// General
 
 // -----------------------------
 // CORE: Mixins
@@ -1204,7 +1285,6 @@ ol {
 }
 
 
-
 // -------------------------
 // CORE: Media Queries
 // -------------------------
@@ -1212,7 +1292,6 @@ ol {
 
 $tablet: 'only screen and (max-width: 860px)';
 $mobile: 'only screen and (max-width: 700px)';
-
 
 
 // -------------------------
@@ -1257,7 +1336,6 @@ $mobile: 'only screen and (max-width: 700px)';
 .justify--full {
     text-align: justify;
 }
-
 
 
 // ------------------------------
@@ -1569,7 +1647,6 @@ input[type="checkbox"] {
 }
 
 
-
 // -------------------------
 // CORE: Print Styles
 // -------------------------
@@ -1713,6 +1790,7 @@ input[type="checkbox"] {
 }
 
 
+
 // -------------------------
 // CORE: Messages
 // -------------------------
@@ -1798,7 +1876,6 @@ input[type="checkbox"] {
         content: "\f040"; // pencil
     }
 }
-
 
 
 // -------------------------
@@ -1890,6 +1967,9 @@ input[type="checkbox"] {
     }
 }
 
+
+
+// Row
 
 // -----------------------------
 //  CORE - Row Alignment
@@ -1984,7 +2064,6 @@ input[type="checkbox"] {
 }
 
 
-
 // -----------------------------
 //  CORE - Row Sizing
 // -----------------------------
@@ -2062,8 +2141,1456 @@ input[type="checkbox"] {
     width: 100%;
 }
 
+//
+// -----------------------------
+//  CORE - Row Style (Colour)
+// -----------------------------
 
 
 
 
+//  Row Colour
+// -------------------------------------
+
+
+// Colour variables
+$row-color--lightest: #FFFFFF;
+$row-color--light: #ECE7DD;
+$row-color--accent: #FEB904;
+$row-color--dark: #888888;
+$row-color--darkest: #082D3A;
+
+$row-color--light-foreground: $row-color--light;
+$row-color--accent-foreground: $row-color--accent;
+$row-color--dark-foreground: $row-color--darkest;
+
+
+// Colour application with backup
+:root {
+    --row-color--lightest: $row-color--lightest;
+    --row-color--light: $row-color--light;
+    --row-color--accent: $row-color--accent;
+    --row-color--dark: $row-color--dark;
+    --row-color--darkest: $row-color--darkest;
+
+    --row-color--dark-foreground: $row-color--dark-foreground;
+    --row-color--light-foreground: $row-color--light-foreground;
+    --row-color--accent-foreground: $row-color--accent-foreground;
+}
+
+
+
+
+
+// -----------------------------
+// Widgets Import
+// -----------------------------
+
+
+// General: Widgets
+
+// -------------------------------------
+//  WIDGETS - General
+// -------------------------------------
+
+
+// Widget Positioning
+.widget {
+    @include clearfix;
+    margin-bottom: 12px;
+    position: relative;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Removes margin for the spacing widget
+.widget--zone-widget[data-name="space"] {
+    margin-bottom: 0;
+}
+
+
+
+// Basic: Logo, Company Name, Navigation, Feature
+
+// -------------------------------------
+//  WIDGETS - Logo
+// -------------------------------------
+
+
+.logo {
+    font-size: 0;
+    line-height: 0;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Company Name
+// -------------------------------------
+
+
+// -------------------------------------
+//  WIDGETS - Navigation
+// -------------------------------------
+
+
+// Navigation Text
+// ---------------
+
+.navigation-item .item-name {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    // Font Styles
+    font-family: $font__navigation--font-family;
+    font-size: $font__navigation--font-size;
+    font-weight: $font__navigation--font-weight;
+    line-height: $font__navigation--line-height;
+    color: $color__navigation--text;
+    letter-spacing: $font__navigation--letter-spacing;
+
+    &:hover {
+        color: $color__navigation--text--hover;
+        cursor: pointer;
+    }
+}
+
+
+
+// Navigation Layout
+// -----------------
+
+
+// Navigation Body
+.navigation-body {
+    @include clearfix;
+}
+
+// Navigation List
+.navigation-list {
+    width: 100%;
+    z-index: 9999;
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+// Navigation List Item
+.navigation-item {
+    position: relative;
+    display: inline-block;
+}
+
+// Dropdown Menu
+.navigation-list--children {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 100%;
+    background-color: $color__body--background;
+
+    .item-name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+// Display Dropdown Menu
+.navigation-item:hover .navigation-list--children {
+    display: block;
+}
+
+.navigation-item--child {
+    display: list-item;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Feature
+// -------------------------------------
+
+
+// Feature Background Image
+.feature__background-image {
+    min-height: 400px;
+}
+
+
+// Feature Content Wrap
+.feature__content-wrap {
+    padding: 12px;
+}
+
+
+// Feature Button
+.feature__button {
+    padding: 3px 6px;
+    text-decoration: none;
+
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+// -------------------------------------
+//  WIDGETS - Content
+// -------------------------------------
+
+
+.widget__content {
+    -ms-word-break: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+}
+
+
+// .wysiwyg-font-size-xx-small { font-size: 10px; }
+
+
+//.wysiwyg-font-size-x-small { font-size: $font__p--font-size * 0.75; }
+
+
+// .wysiwyg-font-size-smaller { font-size: 14px; }
+
+
+.wysiwyg-font-size-small { font-size: 14px; }
+
+
+.wysiwyg-font-size-medium { font-size: 16px; }
+
+
+.wysiwyg-font-size-large { font-size: 24px; }
+
+
+//.wysiwyg-font-size-larger { @include typi($h2-font-map); }
+
+
+.wysiwyg-font-size-x-large { font-size: 32px; }
+
+
+//.wysiwyg-font-size-xx-large { @include typi($h1-font-map); }
+
+
+
+// Media: Images, Gallery, Slideshow
+
+// -------------------------------------
+//  WIDGETS - Image
+// -------------------------------------
+
+
+// Image Figure
+.imagewidget__figure {
+    margin: 0;
+}
+
+
+// Element Resets
+img {
+    display: inline-block;
+}
+
+
+
+
+// Image Captions (Gallery, Slideshow)
+// -----------------------------------
+
+
+.image-title,
+.image-description {
+    display: block;
+
+    // Gives title and description paragraph styling
+    @extend .paragraph;
+}
+
+
+// Image Link
+.image-link {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    &:hover {
+        // Removes underline from image link
+        text-decoration: none;
+    }
+}
+
+
+
+
+// Post Image
+// ----------
+
+.blog-post-list__image {
+    max-height: 300px;
+}
+
+
+
+
+// Image Widget Image
+// --------------------
+
+.imagewidget__image {
+    display: inline;
+}
+
+
+
+
+// Image Widget Image Link
+// ----------------------------
+
+.imagewidget__image-link {
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+
+
+// Placeholder Image
+// -----------------
+
+.no-image {
+    background-image: url(data:image/png;base64,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);
+}
+
+
+
+
+// Align Left
+// ------------------------------
+
+.imagewidget.widget-align-left {
+    &, .caption {
+        text-align: left;
+    }
+}
+
+
+
+// Align Right
+// ------------------------------
+
+.imagewidget.widget-align-right {
+    &, .caption {
+        text-align: right;
+    }
+}
+
+
+
+// Align Center
+// ------------------------------
+
+.imagewidget.widget-align-center {
+    &, .caption {
+        text-align: center;
+    }
+}
+
+
+
+// -------------------------------------
+//  WIDGETS - Image Gallery
+// -------------------------------------
+
+
+
+
+// Element Resets
+// --------------
+
+
+.gallery__figure {
+    margin: 0;
+}
+
+
+.gallery-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+// Stops gallery background image repeating
+.gallery__image-link {
+    background-repeat: no-repeat;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Slideshow
+// -------------------------------------
+
+
+// Element Resets
+.slides-list,
+.pagination-list,
+.responsiveslideshow .figure {
+    margin: 0;
+    list-style: none;
+    line-height: normal;
+}
+
+
+.slideshow-controls {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+
+// Slide Item
+// ----------
+
+.slide-item {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+    &.current {
+        display: list-item; // Current Item
+        position: relative;
+    }
+}
+
+
+
+// Slideshow Images
+// ----------------
+
+.responsiveslideshow {
+
+
+    // Figure
+    .figure {
+        background-color: darken($color__body--background, 5%);
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 400px;
+        position: relative;
+    }
+
+
+    // Hides Img Element
+    .image {
+        display: none;
+    }
+
+
+    .caption  {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        background-color: rgba(0,0,0,0.2);
+    }
+
+
+
+    // Pagination
+    // ----------
+
+
+    // Pagination Button
+    .pagination-item {
+        display: inline-block;
+        line-height: normal;
+    }
+
+
+    // Pagination Button
+    .button--pagination {
+        padding: 3px 6px;
+        font-size: 12px;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    // Pagination Selected Item
+    .selected .button {
+        background-color: $color__primary;
+    }
+}
+
+
+
+// Crop Settings
+// -------------
+
+
+// Cover
+.responsiveslideshow .cover .figure {
+    -webkit-background-size: cover;
+    -moz-background-size:    cover;
+    -o-background-size:      cover;
+    background-size:         cover;
+}
+
+
+// Contain
+.responsiveslideshow .contain .figure {
+    -webkit-background-size: contain;
+    -moz-background-size:    contain;
+    -o-background-size:      contain;
+    background-size:         contain;
+}
+
+
+
+// Slideshow Controls
+// ------------------
+
+.slide-navigation {
+    margin: 10px 0;
+}
+
+
+
+// Buttons: Standard, Tweet, Dropbox, Click to Call, PayPal
+
+// -------------------------------------
+//  WIDGETS - Buttons
+// -------------------------------------
+
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1     Standard Button
+//  2     Paypal Button
+//  3     Dropbox Button
+//  4     Click to Call Button
+
+
+
+
+
+// ---------------------
+//  1. Main Button
+// ---------------------
+
+
+// Standard
+button,
+.button {
+    background-color: $color__button--background;
+    border: 0;
+    color: $color__button--text;
+    display: inline-block;
+    font-family: $font__button--font-family;
+    font-size: $font__button--font-size;
+    font-weight: $font__button--font-weight;
+    line-height: $font__button--line-height;
+    letter-spacing: $font__button--letter-spacing;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+
+    &:hover {
+        background-color: $color__button--background--hover;
+        text-decoration: none;
+    }
+
+
+    &:focus {
+        outline: none;
+    }
+
+
+    &.italic {
+        font-style: italic;
+    }
+
+
+    &.bold {
+        font-weight: bold;
+    }
+}
+
+
+.button {
+    padding: 3px 6px;
+}
+
+
+// Removes any scaling elements from pagination / ecom basket buttons
+.ecombasketsummary__quantity-minus,
+.ecombasketsummary__quantity-plus,
+.ecomproductslist__pagination-item .button,
+.responsiveslideshow__pagination-item .button {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+
+
+
+
+// ---------------------
+//  2. PayPal Button
+// ---------------------
+
+
+.paypalbuynow form { background-color: transparent; }
+
+
+
+
+
+// ---------------------
+//  3. Dropbox Button
+// ---------------------
+
+
+.dropbox-button__button,
+.dropbox-button__label {
+    display: inline-block; // Displays button & label inline
+}
+
+
+
+
+
+// ---------------------------
+//  4. Click to Call Button
+// ---------------------------
+
+
+.clicktocall__phone-number-link {
+
+    &:hover {
+        text-decoration: none;
+    }
+
+
+    @media #{$mobile}, only screen and (max-width: 700px) and (orientation:landscape) {
+        background-color: $color__button--background;
+        border: 0;
+        color: $color__button--text;
+        display: inline-block;
+        font-family: $font__button--font-family;
+        font-size: $font__button--font-size;
+        font-weight: $font__button--font-weight;
+        line-height: $font__button--line-height;
+        letter-spacing: $font__button--letter-spacing;
+        padding: 6px vr(0.75);
+        text-decoration: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+
+        &:hover {
+            background-color: $color__button--background--hover;
+            text-decoration: none;
+        }
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+
+// Social: Social Icons, Twitter Feed
+
+// -------------------------------------
+//  WIDGETS - Social Icons
+// -------------------------------------
+
+
+// Social List
+.social-list {
+    margin: 0;
+}
+
+
+// Social Item
+.social-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+// Social Link
+.social-link {
+    text-rendering: optimizedLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Twitter Feed
+// -------------------------------------
+
+
+.tweet-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+// Account Name
+.account-link {
+    color: $color__h3--text;
+    font-family: $font__h3--font-family;
+    font-size: $font__h3--font-size;
+    font-weight: $font__h3--font-weight;
+    letter-spacing: $font__h3--letter-spacing;
+    line-height: $font__h3--line-height;
+}
+
+
+// Tweet List Items
+.tweet-item {
+    margin-bottom: 20px;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Avatar
+.avatar-link {
+    display: block;
+}
+
+
+// Tweet Anchor Links
+.tweet-content a {
+    -ms-word-break: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+}
+
+
+
+// Other: Divider, Profile
+
+// -------------------------------------
+//  WIDGETS - Divider
+// -------------------------------------
+
+
+hr.rule {
+    border: none;
+    background-color: contrast($color__body--background, lighten($color__body--background, 30%), darken($color__body--background, 30%));
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Profile
+// -------------------------------------
+
+
+// Reset Profile Headline / Strapline styles
+.profile__companystrapline,
+.profile__companydescription {
+
+
+    .companystrapline__strapline,
+    .companydescription__description {
+        padding-bottom: 0;
+    }
+}
+
+
+
+// Embed Widgets
+
+// -------------------------------------
+//  WIDGETS - Yelp
+// -------------------------------------
+
+
+.yelpreview {
+    list-style: none;
+    margin: 0;
+}
+
+
+.yelpreview__review-item {
+    list-style: none;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Youtube
+// -------------------------------------
+
+
+.embed-wrap--video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+
+.embed-wrap--video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Google Maps
+// -------------------------------------
+
+
+
+
+// Embedded map layout fix
+.google-map img {
+    max-width: inherit;
+}
+
+
+// -------------------------------------
+//  WIDGETS - Linkedin
+// -------------------------------------
+
+
+.linkedincompanyprofile,
+.linkedinprofile {
+    overflow: auto;
+}
+
+
+
+
+
+// -----------------------------
+// Plugins Import
+// -----------------------------
+
+
+// -------------------------------------
+//  PLUGINS - Blog
+// -------------------------------------
+
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.  General Styling & Resets
+//  2.  Blog Post List
+//  3.  Blog Post
+
+
+
+
+
+// -------------------------------
+//  1. General Styling & Resets
+// -------------------------------
+
+
+// List Reset
+.sharing-links,
+.tag-list,
+.pagination-numbers {
+    margin: 0;
+    list-style: none;
+}
+
+
+// Resets post image height
+.post-image {
+    font-size: 0;
+    line-height: 0;
+}
+
+
+// Buttons and links
+.blogpostlist__read-more,
+.blogpostlist__pagination-item,
+.blogpost__category-title,
+.blogpost__category-link,
+.blogpost__tags-title,
+.blogpost__tag-list,
+.blogpost__tag-item,
+.blogpost__network-item {
+    display: inline-block;
+}
+
+
+// Post article spacing
+.post-article {
+    margin-bottom: 18px;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Blog background image
+.blogpostlist__image-link,
+.blogpost__image-link {
+    background-position: -9999px;
+    background-repeat: no-repeat;
+}
+
+
+// Inline blog image
+.post-image .image {
+    max-height: 500px;
+
+    @media #{$mobile} {
+        max-height: 300px;
+    }
+}
+
+
+// Post content container
+.post-content {
+    margin: 6px 0;
+}
+
+
+
+
+
+
+// -----------------------------
+//  2. Blog Post List
+// -----------------------------
+
+
+// If an excerpt is present add spacing
+.blogpostlist__post-header + .blogpostlist__post-excerpt {
+    margin-top: 6px;
+}
+
+
+// Footer spacing
+.blogpostlist__post-list-footer {
+    margin: 12px 0;
+}
+
+
+
+
+
+// -----------------------------
+//  3. Single Blog Post
+// -----------------------------
+
+
+// If a post body is present add spacing
+.blogpost__post-header + .blogpost__post-body {
+    margin-top: 12px;
+}
+
+
+// Post category and tags spacing
+.blogpost__post-attributes {
+    margin: 6px 0;
+}
+
+
+// Sharing buttoms spacing
+.blogpost__network-item {
+    margin-right: 3px;
+
+    @media #{$mobile} {
+        margin-bottom: 3px;
+        margin-right: 0;
+    }
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+// Blog timestamp
+.post-footer .timestamp {
+    display: block;
+}
+
+
+// -----------------------------
+//  PLUGINS: Ecommerce
+// -----------------------------
+
+
+
+
+// -----------------------------
+//  Table of Contents
+// -----------------------------
+
+//  1.     General Styling & Resets
+//  2.     Product Filters
+//  3.     Product List
+
+//  4.     Single Product
+//  4.1    Product Form
+
+//  5.     Ecommerce Images
+//  6.     Basket Widget
+//  7.     Basket Summary
+
+
+
+
+
+// -------------------------------
+//  1. General Styling & Resets
+// -------------------------------
+
+
+// List reset
+.product-list,
+.ecombasket__basket-list,
+.ecomcategorieslist__category,
+.ecomproduct__product-gallery {
+    list-style: none;
+    margin: 0;
+}
+
+
+
+
+
+// -------------------------------
+//  2. Product Filters
+// -------------------------------
+
+
+.ecomproductslist__listing-title + .ecomproductslist__product-filters {
+    margin-top: 6px;
+}
+
+
+.ecomproductslist__listing-order {
+    padding: 12px 0;
+}
+
+
+// Product Filters
+.ecomproductslist__form-group {
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+
+
+
+
+
+// -------------------------------
+//  3. Product List
+// -------------------------------
+
+
+// Image height
+.ecomproductslist__product-item-image,
+.ecomproductslist__image-link,
+.ecomproductslist__image {
+    line-height: 250px;
+    max-height: 250px;
+}
+
+
+// Product header and price spacing
+.ecomproductslist__product-content{
+    margin-top: 12px;
+}
+
+
+.ecomproductslist__listing-footer {
+    margin: 12px 0;
+}
+
+
+// Product List Pagination
+.ecomproductslist__pagination-item {
+    display: inline-block;
+
+
+    .ecomproductslist__button {
+        padding: 3px 6px;
+    }
+}
+
+
+
+
+
+// -------------------------------
+//  4. Single Product
+// -------------------------------
+
+
+// Featured product image height
+.ecomproduct__image {
+    line-height: 500px;
+    max-height: 500px;
+
+    @media #{$mobile} {
+        line-height: 300px;
+        max-height: 300px;
+    }
+}
+
+
+// Product gallery thumbnails
+.ecomproduct__product-gallery {
+    margin: 12px 0;
+
+
+    .ecomproduct__image {
+        max-height: 80px;
+
+        @media #{$mobile} {
+            max-height: 60px;
+        }
+    }
+}
+
+
+// Hide featured background image
+.ecomproduct__image-link {
+    background-position: -9999px;
+    background-repeat: no-repeat;
+
+
+    &:hover {
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+    }
+}
+
+
+.ecomproduct__gallery-item,
+.ecombasket__image-link {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 80px;
+    height: 80px;
+    width: 80px;
+    vertical-align: top;
+
+    @media #{$mobile} {
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
+
+
+//  4.1 Product Form
+// -----------------------------
+
+
+.product-actions {
+    margin: 12px 0;
+}
+
+
+.ecomproduct__button {
+
+    // Add product confirmation
+    &.added {
+        background: green;
+        transition: background 0.5s ease;
+
+        &:before {
+            content: "\f00c";
+            display: inline;
+        }
+    }
+
+
+    // Reduce opacity on inactive buttons
+    &:disabled {
+         opacity: 0.3;
+    }
+}
+
+
+// Tax Explainer
+.ecomproduct__tax-explainer {
+    color: fade($color__p--text, 25%);
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 6px;
+}
+
+
+
+
+
+// -------------------------------
+//  5. Ecommerce Images
+// -------------------------------
+
+
+.ecomproductslist__product-item-image,
+.ecomproductslist__image-link,
+.ecomproduct__gallery-item,
+.ecomproduct__image-link,
+.ecombasket__image-link {
+    background-repeat: no-repeat;
+    background-position: -9999px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+// Image centering
+.ecomproductslist__image,
+.ecomproduct__image,
+.ecombasket__image,
+.ecombasketsummary__image,
+.ecombasketsummary__summary-item-link {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+
+// -------------------------------
+//  6. Basket Widget
+// -------------------------------
+
+
+.ecombasket__basket-body {
+    display: none; // Hide by default
+
+
+    .show-content & {
+        display: block;
+    }
+}
+
+
+.ecombasket__basket-item {
+    margin-bottom: 6px;
+    position: relative;
+
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+// Basket Total
+.ecombasket__basket-footer {
+    margin-top: 12px;
+}
+
+
+// Item Remove Button
+.ecombasket__item-remove {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 3px 6px;
+
+
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
+}
+
+
+
+
+// -------------------------------
+//  7. Basket Summary
+// -------------------------------
+
+
+.ecombasketsummary__summary-table {
+    width: 100%;
+
+
+    // Table Row
+    .ecombasketsummary__table-row {
+
+        @media #{$mobile} {
+            border-bottom: 1px solid darken($color__body--background, 10%);
+            @include flex-display();
+            @include flex-direction(column);
+            padding-top: 12px;
+        }
+    }
+
+
+    // Table Row Heading
+    .table-row--heading {
+
+        @media #{$mobile} {
+            display: none;
+        }
+    }
+
+
+    // Table Cell: General
+    .ecombasketsummary__cell {
+        border-radius: 0;
+        padding: 3px 6px;
+        text-align: left;
+        vertical-align: middle;
+
+        @media #{$mobile} {
+            border: 0;
+            display: block;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+        }
+
+
+        &:not(.cell--title):before {
+
+            @media #{$mobile} {
+                content: attr(data-title);
+                display: block;
+                font-size: 12px;
+                line-height: 1.2;
+            }
+        }
+    }
+
+
+    // Column: Image
+    .cell--image,
+    .cell-quantity {
+        width: 15%;
+
+        @media #{$mobile} {
+            padding-bottom: 20px;
+            width: 100%;
+        }
+    }
+
+
+    // Column: Title
+    .cell--title {
+        width: 50%;
+
+        @media #{$mobile} {
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 100%;
+        }
+    }
+
+
+    // Column: Price & Total
+    .cell--price,
+    .cell--total {
+        width: 10%;
+
+        @media #{$mobile} {
+            border-top: 1px solid darken($color__body--background, 10%);
+            width: 100%;
+        }
+    }
+}
+
+
+.ecombasketsummary__summary-form {
+
+    @media #{$mobile} {
+        margin-top: 12px;
+    }
+}
+
+
+// Quantity Wrap
+.ecombasketsummary__quantity-wrap {
+    background-color: darken($color__body--background, 5%);
+    @include flex-display();
+    @include justify-content(space-between);
+    width: 70%;
+
+    @media #{$tablet} {
+        width: 100%;
+    }
+
+    @media #{$mobile} {
+        max-width: 90px;
+        margin-top: 0.5em;
+        width: initial;
+    }
+
+
+    // Quantity Inputs
+    .button--quantity {
+        line-height: initial;
+        padding: 0 3px;
+    }
+}
+
+
+// Quantity buttons
+.ecombasketsummary__quantity-minus,
+.ecombasketsummary__quantity-plus {
+
+    &:disabled {
+        opacity: 0.3;
+    }
+}
 
