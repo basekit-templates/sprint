@@ -55,110 +55,110 @@ $style-set-id: 'example_03' !default;
 
 
 // Template Includes
-// @import "sass/widgets"; // Widgets
+@import "sass/widgets"; // Widgets
 
-// // Plugin Includes
-// @import "sass/plugins/plugin-blog"; // Plugin: Blog CSS
-// @import "sass/plugins/plugin-menu"; // Plugin: Menu CSS
-// @import "sass/plugins/plugin-ecommerce"; // Plugin: Ecommerce CSS
+// Plugin Includes
+@import "sass/plugins/plugin-blog"; // Plugin: Blog CSS
+@import "sass/plugins/plugin-menu"; // Plugin: Menu CSS
+@import "sass/plugins/plugin-ecommerce"; // Plugin: Ecommerce CSS
 
-// @import "sass/rows/layout";
-// @import "sass/rows/color";
+@import "sass/rows/layout";
+@import "sass/rows/color";
 
-// body, p, li, .navigation-item .item-name, button, .button {
-//     font-family: $row-font-body;
-// }
+body, p, li, .navigation-item .item-name, button, .button {
+    font-family: $row-font-body;
+}
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5 {
-//     font-family: $row-font-heading;
-//     font-weight: $row-font-weight;
-// }
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $row-font-heading;
+    font-weight: $row-font-weight;
+}
 
-// h1 b {
-//     font-weight: inherit!important;
-// }
-
-
-// [data-name="row"]:nth-child(n+2) h1 {
-//     font-size: 54px;
-//     line-height: 58px;
-// }
+h1 b {
+    font-weight: inherit!important;
+}
 
 
-// [data-name="row"]:last-child .column {
-//     min-height: 0!important;
-// }
+[data-name="row"]:nth-child(n+2) h1 {
+    font-size: 54px;
+    line-height: 58px;
+}
 
 
-// [data-name="content"] + [data-name="content"] {
-//     margin-top: 6px;
-// }
+[data-name="row"]:last-child .column {
+    min-height: 0!important;
+}
 
 
-// [data-name="content"] + [data-name="button"] {
-//     margin-top: 10px;
-// }
+[data-name="content"] + [data-name="content"] {
+    margin-top: 6px;
+}
 
 
-// .button,
-// button {
-//     font-size: 16px;
-//     padding: 15px 20px;
-// }
+[data-name="content"] + [data-name="button"] {
+    margin-top: 10px;
+}
 
-// .gallery {
-//      .row--default-height &,
-//      .row--thin-height & {
-//         height: 175px;
-//     }
 
-//     +.widget-overlay {
-//         height: calc(100% + 160px);
-//         top: -80px !important;
-//     }
-// }
+.button,
+button {
+    font-size: 16px;
+    padding: 15px 20px;
+}
 
-// .gallery-list {
-//      .row--default-height &,
-//      .row--thin-height & {
-//         margin-bottom: 0;
-//         position: absolute;
-//         top: -80px;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//     }
-// }
+.gallery {
+     .row--default-height &,
+     .row--thin-height & {
+        height: 175px;
+    }
 
-// .gallery__image-link {
-//      .row--default-height &,
-//      .row--thin-height & {
-//         height: calc(100% + 80px);
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//     }
-// }
+    +.widget-overlay {
+        height: calc(100% + 160px);
+        top: -80px !important;
+    }
+}
 
-// [data-name="map"] {
-//     position: initial;
+.gallery-list {
+     .row--default-height &,
+     .row--thin-height & {
+        margin-bottom: 0;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
 
-//     iframe {
-//         height: 100%!important;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//     }
-// }
+.gallery__image-link {
+     .row--default-height &,
+     .row--thin-height & {
+        height: calc(100% + 80px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
 
-// .column {
-//     position: relative;
-// }
+[data-name="map"] {
+    position: initial;
+
+    iframe {
+        height: 100%!important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.column {
+    position: relative;
+}
