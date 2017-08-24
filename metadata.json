@@ -133,7 +133,7 @@
             "font__navigation--font-size": "18px",
             "font__navigation--font-weight": "400",
             "font__navigation--line-height": "20px",
-            "font__navigation--letter-spacing": "0",
+            "font__navigation--letter-spacing": "inherit",
             "color__navigation--background": "transparent",
             "color__navigation--text": "#FFFFFF",
             "color__navigation--text--selected": "#FEB904"
