@@ -1,0 +1,162 @@
+// ----------------------------------
+// BaseKit Standard Theme: Stylesheet
+// ----------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #Mixins
+
+@function bkscale($value, $multiplier) {
+    @if type-of($value) != number {
+        @return $value;
+    }
+    @return $value * $multiplier;
+}
+
+@mixin border-radius($radius: 3px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($prop: all, $time: 0.5s, $timingFunction: ease) {
+    -webkit-transition: $prop $time $timingFunction;
+    -moz-transition:    $prop $time $timingFunction;
+    -ms-transition:     $prop $time $timingFunction;
+    -o-transition:      $prop $time $timingFunction;
+    transition:         $prop $time $timingFunction;
+}
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+$style-set-id: 'example_03' !default;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Petrona|Playfair+Display|Poppins:700|Rubik');
+@import 'sass/style-sets';
+
+
+@import "sass/rows/flexbox-mixins";
+@import "bk-sass-framework"; // BaseKit LESS Framework
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
+//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
+
+
+
+// Template Includes
+@import "sass/widgets"; // Widgets
+
+// Plugin Includes
+@import "sass/plugins/plugin-blog"; // Plugin: Blog CSS
+@import "sass/plugins/plugin-menu"; // Plugin: Menu CSS
+@import "sass/plugins/plugin-ecommerce"; // Plugin: Ecommerce CSS
+
+@import "sass/rows/layout";
+@import "sass/rows/color";
+
+body, p, li, .navigation-item .item-name, button, .button {
+    font-family: $row-font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $row-font-heading;
+    font-weight: $row-font-weight;
+}
+
+h1 b {
+    font-weight: inherit!important;
+}
+
+
+[data-name="row"]:nth-child(n+2) h1 {
+    font-size: 54px;
+    line-height: 58px;
+}
+
+
+[data-name="row"]:last-child .column {
+    min-height: 0!important;
+}
+
+
+[data-name="content"] + [data-name="content"] {
+    margin-top: 6px;
+}
+
+
+[data-name="content"] + [data-name="button"] {
+    margin-top: 10px;
+}
+
+
+.button,
+button {
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.gallery {
+     .row--default-height &,
+     .row--thin-height & {
+        height: 175px;
+    }
+
+    +.widget-overlay {
+        height: calc(100% + 160px);
+        top: -80px !important;
+    }
+}
+
+.gallery-list {
+     .row--default-height &,
+     .row--thin-height & {
+        margin-bottom: 0;
+        position: absolute;
+        top: -80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.gallery__image-link {
+     .row--default-height &,
+     .row--thin-height & {
+        height: calc(100% + 80px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+[data-name="map"] {
+    position: initial;
+
+    iframe {
+        height: 100%!important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.column {
+    position: relative;
+}

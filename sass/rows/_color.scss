@@ -1,0 +1,244 @@
+
+// .row .widget {
+//     z-index: 1;
+// }
+
+
+.row--dark {
+    background-color: $row-color-dark;
+
+    &[style] .row__container:after {
+        background-color: $row-color-dark;
+        content: "";
+        display: block;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &[style] .content,
+    &[style] .bk-button {
+        position: relative;
+        z-index: 9001;
+    }
+}
+
+.row--dark {
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .social-link {
+        color: $row-color-light;
+    }
+
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
+    }
+
+
+    a {
+        color: $row-color-light;
+    }
+
+
+    p,
+    .widget__content,
+    label {
+        color: #d5e1e6;
+    }
+
+
+    .social-item {
+        background-color: lighten($row-color-dark, 15%);
+    }
+
+
+    .button,
+    button,
+    .contactform__button {
+        background-color: rgba(216, 216, 216, .41);
+        color: #f2f2f2;
+    }
+}
+
+
+
+
+.row--light {
+    background-color: $row-color-light;
+
+    &[style] .row__container:after {
+        background-color: $row-color-light;
+        opacity: 0.5;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &[style] .content,
+    &[style] .bk-button {
+        position: relative;
+        z-index: 9001;
+    }
+}
+
+.row--light {
+
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .social-link {
+        color: $row-color-dark;
+    }
+
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
+    }
+
+
+    a {
+        color: $row-color-accent;
+    }
+
+
+    p,
+    .widget__content {
+        color: #797979;
+    }
+
+
+    .social-item {
+        background-color: darken($row-color-light, 15%);
+    }
+
+
+    .button,
+    button,
+    .contactform__button {
+        background-color: $row-color-accent;
+        color: $row-color-light;
+    }
+}
+
+
+.row--light .contactform__legend {
+    color: #1A1919;
+}
+
+.row--light .contactform__button {
+    background-color: $row-color-accent;
+}
+
+.row--light input[type="text"],
+.row--light input[type="search"],
+.row--light input[type="email"],
+.row--light input[type="tel"],
+.row--light input[type="url"],
+.row--light input[type="password"],
+.row--light textarea {
+    background-color: rgba(216, 216, 216, .41);
+}
+
+
+
+
+
+.row--accent {
+    background-color: $row-color-accent;
+
+    &[style] .row__container:after {
+        background-color: $row-color-accent;
+        opacity: 0.5;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &[style] .content,
+    &[style] .bk-button {
+        position: relative;
+        z-index: 9001;
+    }
+}
+
+.row--accent {
+
+
+    .navigation-item .item-name,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a,
+    .social-link {
+        color: $row-color-light;
+    }
+
+    .navigation-toggle:before {
+        box-shadow: 0 6px 0 $row-color-light;
+    }
+
+    .navigation-toggle:before,
+    .navigation-toggle:after {
+        background: $row-color-light;
+    }
+
+
+    p,
+    .widget__content,
+    label {
+        color: #e6e4e4;
+    }
+
+
+    .social-item {
+        background-color: darken($row-color-accent, 15%);
+    }
+
+
+    .button,
+    button,
+    .contactform__button {
+        background-color: rgba(216, 216, 216, .41);
+        color: $row-color-light;
+    }
+}
+
+
+.row--background-type-image {
+    background-size: cover;
+}
+
+.row--background-type-image {
+    background-color: transparent;
+}
