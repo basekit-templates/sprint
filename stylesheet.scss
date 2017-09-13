@@ -64,14 +64,16 @@ $style-set-id: 'example_03' !default;
 @import "sass/rows/color";
 
 
-.row + .widget-overlay {
+.row + .widget-overlay:hover,
+.row + .widget-overlay.hover {
+    background: transparent;
+    border: none;
+    box-shadow: inset 0 0 0 6px rgba(0,147,135,0.3);
     
-    &:focus,
-    &.hover,
-    &:hover {
+    body:not(.touch) & {
         background: transparent;
-        border: 1px solid rgba(0, 148, 136, 0.75);
-        box-shadow: inset 0 0 10px 3px rgba(0,147,135,0.3);
+        border: none;
+        box-shadow: inset 0 0 0 6px rgba(0,147,135,0.3);
     }
 }
 
