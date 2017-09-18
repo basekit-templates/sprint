@@ -63,6 +63,21 @@ $style-set-id: 'example_03' !default;
 @import "sass/rows/layout";
 @import "sass/rows/color";
 
+
+.row + .widget-overlay:hover,
+.row + .widget-overlay.hover {
+    background: transparent;
+    border: none;
+    box-shadow: inset 0 0 0 6px rgba(0,147,135,0.3);
+    
+    body:not(.touch) & {
+        background: transparent;
+        border: none;
+        box-shadow: inset 0 0 0 6px rgba(0,147,135,0.3);
+    }
+}
+
+
 body, p, li, .navigation-item .item-name, button, .button {
     font-family: $row-font-body;
 }
